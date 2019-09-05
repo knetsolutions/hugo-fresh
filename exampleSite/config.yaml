@@ -13,7 +13,7 @@ params:
     sizes: [400,600]
   hero:
     # Main hero title
-    title: Training and Academic Projects in SDN
+    title: SDN Training and Academic Projects
     # Hero subtitle (optional)
     subtitle: Online Trainings in Software Defined Networking,from beginners to advanced level.  Provide guidance/assistance/consultation in Academic SDN Project. conduct SDN workshop in Colleges.
     # Button text
@@ -92,18 +92,22 @@ params:
     title: Our Clients love us!
     subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
     clients:
-    - name: Irma Walters
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: Accountant
+    - name: Bijju, INDIA
+      quote: Knet Solutions was a good platform for guidance and completion of our project. Always got immediate response ,when doubts are being asked anytime. The work gets completed before the deadline with their assistance.if we are seriously showing interest on the project. Knetsolutions gave a friendly environment while teaching about stuffs given by them to the project and also during clarifying the doubtsIt was an awesome journey with knetsolutions being a pillar support for completion of project and very thankful for assisting during the hardships of my project.
+      job: Student
       img: 1
-    - name: John Bradley
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: Financial Analyst
+    - name: Haider, Malaysia
+      quote: knet solutions is probably the best solution I've ever had in a topic of Software-Defined Networking. Although the content is very difficult for me when I read the books, the lecturer Mr. Suresh Kumar made it easy to understand. The lecturer clearly understands his subject, and made the content well suited for novice to advanced student.
+      job: Student
       img: 2
-    - name: Gary Blackman
-      quote: Lorem ipsum dolor sit amet, elit deleniti dissentias quo eu, hinc minim appetere te usu, ea case duis scribentur has. Duo te consequat elaboraret, has quando suavitate at.
-      job: HR Manager
+    - name: Udeh, Europe
+      quote: Great course handled by an outstanding instructor. What makes it unique is how the theoretical details of every section was explained first before going into the practical application. I strongly recommend it for any one that wants to have a full grasp of SDN.
+      job: Professional
       img: 3
+    - name: Jose, Dominica
+      quote: I loved it, great course. It explained everything I wanted, and needed to learn about RYU. And includes all the coding and documentation about them, so is very complete and easy to understand.
+      job: Student
+      img: 3    
   section5: true
   footer:
     # Logo (from /images/logos/___)
