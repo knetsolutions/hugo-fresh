@@ -104,7 +104,7 @@ params:
       quote: Great course handled by an outstanding instructor. What makes it unique is how the theoretical details of every section was explained first before going into the practical application. I strongly recommend it for any one that wants to have a full grasp of SDN.
       job: Professional
       img: 3  
-  section5: true
+  section5: false
   footer:
     # Logo (from /images/logos/___)
     logo: fresh-white-alt.svg
@@ -124,18 +124,14 @@ params:
     bulmalogo: true
     quicklinks:
       column1:
-        title: "Product"
+        title: "Contact Us"
         links:
-        - text: Discover features
-          link: /
-        - text: Why choose our product?
-          link: /
-        - text: Compare features
-          link: /
-        - text: Our roadmap
-          link: /
-        - text: AGB
-          link: /agb
+        - text: 129,Saiganesh Nagar,
+                Pallikaranai, Chennai,
+                India.
+        - text: Mobile +919445042007
+        - text: Whatsapp +919445042007
+        - text: knetsolutions2@gmail.com
       column2:
         title: "Docs"
         links:
