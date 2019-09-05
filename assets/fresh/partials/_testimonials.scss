@@ -6,7 +6,7 @@ Testimonials Styles
     position: relative;
     overflow: hidden;
     margin: 10px auto;
-    min-width: 220px;
+    min-width: 150px;
     max-width: 310px;
     width: 100%;
     color: #333;
@@ -30,12 +30,12 @@ Testimonials Styles
     blockquote {
         margin: 0;
         display: block;
-        border-radius: 8px;
+        border-radius: 1px;
         position: relative;
         background-color: $smoke-white;
         padding: 10px 10px 20px 10px;
         font-size: 1.0rem;
-        font-weight: 300;
+        font-weight: 100;
         margin: 0 0 -40px;
         line-height: 1.6em;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
