@@ -6,7 +6,7 @@ Testimonials Styles
     position: relative;
     overflow: hidden;
     margin: 10px auto;
-    min-width: 150px;
+    min-width: 220px;
     max-width: 310px;
     width: 100%;
     color: #333;
@@ -30,12 +30,12 @@ Testimonials Styles
     blockquote {
         margin: 0;
         display: block;
-        border-radius: 1px;
+        border-radius: 6px;
         position: relative;
         background-color: $smoke-white;
-        padding: 10px 10px 20px 10px;
+        padding: 30px 50px 65px 50px;
         font-size: 1.0rem;
-        font-weight: 100;
+        font-weight: 500;
         margin: 0 0 -40px;
         line-height: 1.6em;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -44,7 +44,7 @@ Testimonials Styles
         font-family: 'FontAwesome';
         content: "\f10d";
         position: absolute;
-        font-size: 15px;
+        font-size: 20px;
         opacity: 0.3;
         font-style: normal;
     }

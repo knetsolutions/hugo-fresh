@@ -93,21 +93,17 @@ params:
     subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
     clients:
     - name: Bijju, INDIA
-      quote: It was an awesome journey with knetsolutions being a pillar support for completion of project and very thankful for assisting during the hardships of my project.
+      quote: It was an awesome journey with knetsolutions being a pillar support for completion of project and very thankful for assisting during the hardships of my project.Always got immediate response ,when doubts are being asked anytime. 
       job: Student
       img: 1
     - name: Haider, Malaysia
-      quote: The lecturer clearly understands the subject, and made the content well suited for novice to advanced student.
+      quote: knet solutions is probably the best solution I've ever had in a topic of Software-Defined Networking. The lecturer clearly understands the subject, and made the content well suited for novice to advanced student.
       job: Student
       img: 2
     - name: Udeh, Europe
       quote: Great course handled by an outstanding instructor. What makes it unique is how the theoretical details of every section was explained first before going into the practical application. I strongly recommend it for any one that wants to have a full grasp of SDN.
       job: Professional
-      img: 3
-    - name: Jose, Dominica
-      quote: I loved it, great course. It explained everything I wanted, and needed to learn about RYU. And includes all the coding and documentation about them, so is very complete and easy to understand.
-      job: Student
-      img: 3    
+      img: 3  
   section5: true
   footer:
     # Logo (from /images/logos/___)
