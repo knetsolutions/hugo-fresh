@@ -34,21 +34,18 @@ params:
   navbar:
   - title: Home
     url: /
-  - title: Trainings
-    url: /tr
-  - title: Projects
+  - title: Videos
     url: /
-  - title: Blog
+  - title: SDN Projects
+    url: /
+  - title: SDN Tutorials
     sublinks:
-    - title: Dropdown item
+    - title: Testing IPv6 in Mininet
       url: /
-    - title: Dropdown item
+    - title: Mininet Cluster
       url: /
-    - title: Dropdown item
+    - title: Openflow 
       url: /
-  - title: Sign up
-    url: /
-    button: true
   section1:
     title: Our SDN Courses @ 10$
     subtitle: in Udemy
@@ -56,20 +53,20 @@ params:
     - title: SDN Crash Course
       icon: mouse-globe
       text: SDN Crash Course (Openflow, Mininet, RYU) Practical/Handson
-      url: /
+      url: https://www.udemy.com/course/beginners-sdn-course-with-ryu-controller-practical-handson/?couponCode=TEN_DOLLAR
       buttonText: Get started
     - title: NetConf/YANG Course
       icon: laptop-cloud
       text: Learn NetConf ,Yang ,SDN Opendaylight Netconf with practical
-      url: /
+      url: https://www.udemy.com/course/learn-netconf-yang-sdn-opendaylight-with-practical/?couponCode=NETCONF_PROMO
       buttonText: Get started
     - title: Terraform
       icon: plug-cloud
       text: Learn Terraform with Openstack (practical exercises)
-      url: /
+      url: https://www.udemy.com/course/learn-terraform-with-openstack-practical-exercises/?couponCode=PROMO1
       buttonText: Get started
   section2:
-    title: You're here because you want the best
+    title: You're here because you want the best Academic SDN Project guidance and Training.
     subtitle: And we know it
     features:
     - title: Instructor Profile
@@ -82,7 +79,7 @@ params:
     - title: Guided 100+ SDN Projects
       text: Guided More than 100+ SDN Projects, studends are from around the world (India, U.S.A, Dominican Rebublic, Brazil, U.K,  Norway, Germany, Malaysia, Vietnam, Saudi Arabia, Yemen, Pakistan) .
       icon: mobile-feed
-    - title: Wide Project Topics
+    - title: Wide SDN Project Topics
       text: MultiDomain SDN Controller, Migrations, DDoS, Flow table Mgmt, Dynamic VLAN/MPLS , Flow Slicing, BGP Attack Detection, Dynamic Load balancing with BGP Speaker, QoS, Server Load balancer, Stateful Firewall, Wireless Handover.
       icon: mobile-feed
   section3: false
@@ -113,17 +110,13 @@ params:
     logo: fresh-white-alt.svg
     # Social media links (GitHub, Twitter, etc.). All are optional.
     socialmedia:
-    - link: https://github.com/lucperkins/github-fresh
+    - link: https://github.com/knetsolutions
       # Icons are from Font Awesome
       icon: github
-    - link: https://dribbble.com/#
-      icon: dribbble
-    - link: https://facebook.com/#
+    - link: https://facebook.com/sdntraining
       icon: facebook
-    - link: https://twitter.com/lucperkins
-      icon: twitter
-    - link: https://bitbucket.org/#
-      icon: bitbucket
+    - link: https://www.youtube.com/channel/UCTD6X9_oDqIYs_xpE7moFnQ
+      icon: youtube
     bulmalogo: true
     quicklinks:
       column1:
