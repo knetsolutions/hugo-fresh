@@ -79,19 +79,18 @@ params:
     - title: One to One SDN Project Training in Gotomeeting.
       text: Provides Project training and Support in Gotomeeting(gotomeeting.com) Video meetings. Each session will be recorded(video) and shared to the studends. 
       icon: doc-sync
-    - title: SDN Projects
+    - title: Guided 100+ SDN Projects
       text: Guided More than 100+ SDN Projects, studends are from around the world (India, U.S.A, Dominican Rebublic, Brazil, U.K,  Norway, Germany, Malaysia, Vietnam, Saudi Arabia, Yemen, Pakistan) .
       icon: mobile-feed
-    - title: SDN Project Topics
-      text: MultiDomain SDN Controller, Migrations, DDoS, Flow table Mgmt, Dynamic VLAN/MPLS , Flow Slicing, 
+    - title: Wide Project Topics
+      text: MultiDomain SDN Controller, Migrations, DDoS, Flow table Mgmt, Dynamic VLAN/MPLS , Flow Slicing, BGP Attack Detection, Dynamic Load balancing with BGP Speaker, QoS, Server Load balancer, Stateful Firewall, Wireless Handover.
       icon: mobile-feed
-
-  section3:
-    title: One platform
-    subtitle: To rule them all
-    image: illustrations/mockups/app-mockup.png
-    buttonText: Get started
-    buttonLink: "#"
+  section3: false
+    #title: One platform
+    #subtitle: To rule them all
+    #image: illustrations/mockups/app-mockup.png
+    #buttonText: Get started
+    #buttonLink: "#"
   section4:
     title: Our Clients love us!
     subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
