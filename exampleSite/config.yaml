@@ -13,7 +13,7 @@ params:
     sizes: [400,600]
   hero:
     # Main hero title
-    title: SDN Training and Academic Projects
+    title: Online SDN Training & Academic Projects
     # Hero subtitle (optional)
     subtitle: Online Trainings in Software Defined Networking,from beginners to advanced level.  Provide guidance/assistance/consultation in Academic SDN Project. conduct SDN workshop in Colleges.
     # Button text
@@ -50,7 +50,7 @@ params:
     url: /
     button: true
   section1:
-    title: Top SDN Courses @ 10$
+    title: Our SDN Courses @ 10$
     subtitle: in Udemy
     tiles:
     - title: SDN Crash Course
@@ -72,16 +72,20 @@ params:
     title: You're here because you want the best
     subtitle: And we know it
     features:
-    - title: Instructor - Experienced industry SDN/Networking Professional
-      text: 17+ years Industry experience in SDN/Networking/Cloud. Contributed in RYU, ODL, Opencontrail SDN Controllers and Openstack Projects. 
+    - title: Instructor Profile
+      text: 17+ years Industry experience in SDN/Networking/Cloud. Telecom/Datacenter SDN Deployment/Development experience, Contributed in RYU, ODL, Opencontrail SDN Controllers and Openstack Cloud Projects. 
       # Icon (from /images/illustrations/icons/___.svg)
       icon: laptop-globe
     - title: One to One SDN Project Training in Gotomeeting.
-      text: Provides Project training and Support in Gotomeeting(gotomeeting.com) Video meetings, and recorded session can be downladed and viewed by studends many times. 
+      text: Provides Project training and Support in Gotomeeting(gotomeeting.com) Video meetings. Each session will be recorded(video) and shared to the studends. 
       icon: doc-sync
     - title: SDN Projects
       text: Guided More than 100+ SDN Projects, studends are from around the world (India, U.S.A, Dominican Rebublic, Brazil, U.K,  Norway, Germany, Malaysia, Vietnam, Saudi Arabia, Yemen, Pakistan) .
       icon: mobile-feed
+    - title: SDN Project Topics
+      text: MultiDomain SDN Controller, Migrations, DDoS, Flow table Mgmt, Dynamic VLAN/MPLS , Flow Slicing, 
+      icon: mobile-feed
+
   section3:
     title: One platform
     subtitle: To rule them all
