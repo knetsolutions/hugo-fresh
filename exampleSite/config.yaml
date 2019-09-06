@@ -34,18 +34,30 @@ params:
   navbar:
   - title: Home
     url: /
+  - title: Services
+    url: /services
   - title: Videos
     url: /
   - title: SDN Projects
-    url: /
+    sublinks:
+    - title: SDN Project Guidance
+      url: /sdn-projects  
+    - title: SDN Project Ideas
+      url: /sdn-project-ideas
+    - title: SDN Mini Projects
+      url: /sdn-mini-projects
   - title: SDN Tutorials
     sublinks:
     - title: Testing IPv6 in Mininet
-      url: /
+      url: /sdn-tutorials/testing-ipv6-in-mininet
     - title: Mininet Cluster
-      url: /
+      url: /sdn-tutorials/mininet-cluster
     - title: Openflow 
-      url: /
+      url: /sdn-tutorials/openflow-tutorial
+    - title: Mininet 
+      url: /sdn-tutorials/mininet-tutorial   
+  - title: About Us
+    url: /about
   section1:
     title: Our SDN Courses @ 10$
     subtitle: in Udemy
