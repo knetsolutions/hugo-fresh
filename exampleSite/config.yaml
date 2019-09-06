@@ -36,17 +36,17 @@ params:
     url: /
   - title: Services
     url: /services
-  - title: Videos
-    url: /
   - title: SDN Projects
     sublinks:
-    - title: SDN Project Guidance
+    - title: Videos
+      url: /videos        
+    - title: Project Guidance
       url: /sdn-projects  
     - title: SDN Project Ideas
       url: /sdn-project-ideas
-    - title: SDN Mini Projects
+    - title: Mini Projects
       url: /sdn-mini-projects
-  - title: SDN Tutorials
+  - title: Blog
     sublinks:
     - title: Testing IPv6 in Mininet
       url: /sdn-tutorials/testing-ipv6-in-mininet
