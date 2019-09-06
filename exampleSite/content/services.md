@@ -29,6 +29,9 @@ Our Training Courses available in UDEMY. We provide coupon for 50% discounted pr
 {{% title5 "Fees:  10$" %}}
 {{% title5 "Payment Method: Pay in UDEMY " %}}
 
+{{% title5 "Free Access to Students, Who can not afford the price ...Contact us.... " %}}
+
+
 <br>
 
 {{% title3 "3. SDN Consulting - One on One" %}}
