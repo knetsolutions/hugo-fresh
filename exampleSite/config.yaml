@@ -13,7 +13,7 @@ params:
     sizes: [400,600]
   hero:
     # Main hero title
-    title: Online SDN Training & Academic Projects
+    title: KNet Solutions
     # Hero subtitle (optional)
     subtitle: Online Trainings in Software Defined Networking,from beginners to advanced level.  Provide guidance/assistance/consultation in Academic SDN Project. conduct SDN workshop in Colleges.
     # Button text
@@ -25,11 +25,11 @@ params:
     # Footer logos (from static/images/logos/clients/___.svg)
     # logos to be added for RYU, Mininet, Miniet Wifi, Openflow, OVS, Opendaylight, NetConf, YANG, P4, P4RunTime
     clientlogos:
-    - systek
-    - tribe
-    - kromo
-    - infinite
-    - gutwork
+    - ryu
+    - odl
+    - ovs
+    - mininet
+    - knet
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
   - title: Home
