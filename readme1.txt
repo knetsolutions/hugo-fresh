@@ -17,4 +17,4 @@ cp themes/hugo-fresh/exampleSite/content/* content/. -rf
 
 5. Start the server
 
-hugo server -D -log --baseURL "http://public-ip:8080/" --bind "10.0.1.3"p 8080
+hugo server -D -log --baseURL "http://knetsolutions.in/" --bind "10.0.1.3" -p 80

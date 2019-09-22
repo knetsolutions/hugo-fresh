@@ -6,7 +6,7 @@ theme: hugo-fresh
 params:
   navbarlogo:
   # Logo (from static/images/logos/___)
-   image: logos/fresh.svg
+   image: logos/knet.svg
    link: /
   font:
     name: "Open Sans"
@@ -119,7 +119,7 @@ params:
   section5: false
   footer:
     # Logo (from /images/logos/___)
-    logo: fresh-white-alt.svg
+    logo: knet.svg
     # Social media links (GitHub, Twitter, etc.). All are optional.
     socialmedia:
     - link: https://github.com/knetsolutions
