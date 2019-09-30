@@ -13,7 +13,7 @@ params:
     sizes: [400,600]
   hero:
     # Main hero title
-    title: KNet Solutions
+    title: KNET Solutions
     # Hero subtitle (optional)
     subtitle: Online Trainings in Software Defined Networking,from beginners to advanced level.  Provide guidance/assistance/consultation in Academic SDN Project. conduct SDN workshop in Colleges.
     # Button text
@@ -107,7 +107,7 @@ params:
     - name: Bijju, INDIA
       quote: It was an awesome journey with knetsolutions being a pillar support for completion of project and very thankful for assisting during the hardships of my project.Always got immediate response ,when doubts are being asked anytime. 
       job: Student
-      img: 1
+      img: 2
     - name: Haider, Malaysia
       quote: knet solutions is probably the best solution I've ever had in a topic of Software-Defined Networking. The lecturer clearly understands the subject, and made the content well suited for novice to advanced student.
       job: Student
@@ -141,16 +141,12 @@ params:
         - text: Whatsapp +919445042007
         - text: knetsolutions2@gmail.com
       column2:
-        title: "Docs"
+        title: "Quick Links"
         links:
-        - text: Get started
-          link: /
-        - text: User guides
-          link: /
-        - text: Admin guide
-          link: /
-        - text: Developers
-          link: /
+        - text: Services
+          link: /services
+        - text: SDN Projects
+          link: /sdn-project-ideas
       column3:
         title: "Blog"
         links:
