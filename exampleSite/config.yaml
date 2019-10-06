@@ -1,5 +1,6 @@
 baseURL: http://knetsolutions.in/
 languageCode: en-us
+disableKinds: ["taxonomy", "taxonomyTerm"]
 title: knetsolutions - Sofware Defined Networking (SDN) Training and Academic Projects 
 theme: hugo-fresh
 
@@ -23,7 +24,6 @@ params:
     # Hero image (from static/images/___)
     image: illustrations/worker.svg
     # Footer logos (from static/images/logos/clients/___.svg)
-    # logos to be added for RYU, Mininet, Miniet Wifi, Openflow, OVS, Opendaylight, NetConf, YANG, P4, P4RunTime
     clientlogos:
     - ryu
     - odl
@@ -102,7 +102,7 @@ params:
     #buttonLink: "#"
   section4:
     title: Our Clients love us!
-    subtitle: Lorem ipsum sit dolor amet is a dummy text used by typography industry
+    subtitle: Client Testimonials
     clients:
     - name: Bijju, INDIA
       quote: It was an awesome journey with knetsolutions being a pillar support for completion of project and very thankful for assisting during the hardships of my project.Always got immediate response ,when doubts are being asked anytime. 
@@ -147,10 +147,10 @@ params:
           link: /services
         - text: SDN Projects
           link: /sdn-project-ideas
-      column3:
-        title: "Blog"
-        links:
-        - text: Latest news
-          link: /blog/first
-        - text: Tech articles
-          link: /blog/second
+      #column3:
+      #  title: "Blog"
+      #  links:
+      #  - text: Latest news
+      #    link: /blog/first
+      #  - text: Tech articles
+      #    link: /blog/second

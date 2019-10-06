@@ -1,5 +1,6 @@
 ---
 title: Software Defined Networking (SDN) Project Assistance
+draft: false
 ---
 
 
@@ -16,29 +17,29 @@ we work online and conducts project training in gotomeeting. so no restriction o
 
 Some of the guided projects are below
 
-    Scalable, Fault Tolerance SDN Controller ( Multiple SDN Controller with Master/Slave roles and Data Synchronization)
-    Flow table Management
-    QoS(Traffic Engineering)
-    BGP Router 5. DDoS
-    Multitenancy support
-    Stateful Firewall
-    SDN BGP loadbalancer
-    SDN BGP AS Defender
-    Dynamic LB with SFLOW
-    DDoS Snort
-    Elephant flow detection and mitigation
-    Network utilization Visualizer with Grafana
-    Hybrid networks
-    Shortest Path
-    Multipath LB
-    Topology discovery
-    MultiDomain SDN Controllers synchronization
-    VxLAN
-    Mininet wifi
-    Server Load balancing with Virtual IP
-    QoS using Meter Table / Queuing
-    Switch Migration
-    SDN IOT Projects
+    - Scalable, Fault Tolerance SDN Controller ( Multiple SDN Controller with Master/Slave roles and Data Synchronization)
+    - Flow table Management
+    - QoS(Traffic Engineering)
+    - BGP Router 5. DDoS
+    - Multitenancy support
+    - Stateful Firewall
+    - SDN BGP loadbalancer
+    - SDN BGP AS Defender
+    - Dynamic LB with SFLOW
+    - DDoS Snort
+    - Elephant flow detection and mitigation
+    - Network utilization Visualizer with Grafana
+    - Hybrid networks
+    - Shortest Path
+    - Multipath LB
+    - Topology discovery
+    - MultiDomain SDN Controllers synchronization
+    - VxLAN
+    - Mininet wifi
+    - Server Load balancing with Virtual IP
+    - QoS using Meter Table / Queuing
+    - Switch Migration
+    - SDN IOT Projects
 
 
 <br>
@@ -53,18 +54,12 @@ KNet Solution implements IOT capability in its SDN IOT Test bed. IOT Gateway app
 <br>
 we do customize the IOT Test bed based on project needs.
 <br>
-We provides training and guidance to complete your SDN IOT Project. we guided students in India (Chennai, Bangalore, Hyderabad, kolkatta, delhi, mumbai) and other countries (malaysia, germany, france, brazil, united states, pakistan, egypt, etc)
-<br>
-we work online and conducts project training in gotomeeting. so no restriction on geographical location.
-
-<br>
-
 
 {{% title3 "4. SDN Wireless Projects " %}}
 
 we use mininet-wifi as Test environment for SDN Wifi Projects.
-<br>
-- -SDN Wireless Handover Projects
-- -SDN Wireless dynamic bandwidth allocation
-- -QoS in SDN Wirless networks
+
+      SDN Wireless Handover Projects
+      SDN Wireless dynamic bandwidth allocation
+      QoS in SDN Wirless networks
 
