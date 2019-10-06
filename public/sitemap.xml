@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://knetsolutions.in/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/mininet-cluster/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/openflow-tutorial/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/services/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-videos/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-mini-projects/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-projects/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-project-ideas/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

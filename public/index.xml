@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>knetsolutions - Sofware Defined Networking (SDN) Training and Academic Projects</title>
+    <link>http://knetsolutions.in/</link>
+    <description>Recent content on knetsolutions - Sofware Defined Networking (SDN) Training and Academic Projects</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://knetsolutions.in/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Us</title>
+      <link>http://knetsolutions.in/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/about/</guid>
+      <description>KNET SOLUTIONS is micro startup, based out of Chennai, India. We are group of experienced IT Industry Professionals worked wih Networking/SDN/Cloud/development/architect in leading Telecom/Datacom Companies. Our Services includes Udemy Courses in Cutting Edge technologies, Online SDN Trainings , Workshops and assist SDN academic projects. We also contribute in Opensource Projects. Contact us for More Details Mobile/ Whatsapp: +919445042007 Email: knetsolutions2@gmail.com Facebook Page: https://facebook.com/sdntraining Youtube Channel: https://www.youtube.com/channel/UCTD6X9_oDqIYs_xpE7moFnQ </description>
+    </item>
+    
+    <item>
+      <title>Mininet Basics</title>
+      <link>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</guid>
+      <description>To check the mininet version
+mn --version  To clean up the existing ovs bridges and namespaces
+  Note: sometime we mistakenly closed the mininet shell, or mininet crashed. But the topology components will continue to exists. To clean such stuff, cleanup command is used.</description>
+    </item>
+    
+    <item>
+      <title>Mininet Cluster</title>
+      <link>http://knetsolutions.in/sdn-tutorials/mininet-cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/mininet-cluster/</guid>
+      <description>Introduction  Generally we use mininet to simulate the topology in a single system/computer/virutal machine. The System resources limits our topology size.
+Suppose, we want to build the large topology with 1000s of switches and nodes. We cannot build this topology in single system. The solution is, we can build the subset of the topology in mulitiple systems and connect each other system via GRE Tunnel.</description>
+    </item>
+    
+    <item>
+      <title>OpenFlow Tutorial</title>
+      <link>http://knetsolutions.in/sdn-tutorials/openflow-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/openflow-tutorial/</guid>
+      <description>Introduction  The OPENFLOW specification covers the components and the basic functions of the switch, and the OpenFlow switch protocol to manage an OpenFlow switch from a remote OpenFlow controller.
+Openflow Version Details:
+Openflow 1.1
+Openflow 1.2
+Openflow 1.3
+Openflow 1.4
+Openflow 1.5
+Most widley supported: 1.3 2. Switch Components
+An OpenFlow Logical Switch consists of one or more flow tables and a group table, which perform packet lookups and forwarding, and one or more OpenFlow channels to an external controller (Figure 1).</description>
+    </item>
+    
+    <item>
+      <title>Our Services</title>
+      <link>http://knetsolutions.in/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/services/</guid>
+      <description>1. SDN Project Assistance Description : Academic SDN Project Guidance  Training: Online in Gotomeeting  Duration : 4 to 6 Weeks  Fees: 250$(U.S.D) Note: Fees is subject to change, It depends on the complexity of the project. Payment Terms:
+ -10% advance -50% Milestone1. -40% Final. Payment Methods
+ For International Students: Paypal, - 8% Transcational charges applicable
+ For Indian Students: Bank Transfer - 18% GST applicable</description>
+    </item>
+    
+    <item>
+      <title>Sample SDN Project Videos</title>
+      <link>http://knetsolutions.in/sdn-videos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-videos/</guid>
+      <description>
+1. Router Project
+  
+2. VLAN Project
+  
+3. DDoS Project
+  
+4. BGP Router Project
+  
+5. Server Loadbalancer
+  
+6. Scalable,HighAvailable MultiController
+  Contact us for More Details Mobile/ Whatsapp: +919445042007 Email: knetsolutions2@gmail.com Facebook Page: https://facebook.com/sdntraining Youtube Channel: https://www.youtube.com/channel/UCTD6X9_oDqIYs_xpE7moFnQ </description>
+    </item>
+    
+    <item>
+      <title>Software Defined Networking (SDN) Mini Projects</title>
+      <link>http://knetsolutions.in/sdn-mini-projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-mini-projects/</guid>
+      <description>1.VLAN 2.DDoS Defender 3.Router 4.Network Slicing 5.Server Loadbalancer 6.Datacenter topology with SPF</description>
+    </item>
+    
+    <item>
+      <title>Software Defined Networking (SDN) Project Assistance</title>
+      <link>http://knetsolutions.in/sdn-projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-projects/</guid>
+      <description>1. Introduction We provides training and guidance to complete your SDN Project. we have guided students across the Globe. We have studends in India ( from Chennai, Bangalore, Hyderabad, kolkatta, delhi, mumbai), and other countries (malaysia, germany, france, brazil, united states, pakistan, egypt, yemen, saudi arabia, united kingdom, etc)
+we work online and conducts project training in gotomeeting. so no restriction on geographical location.
+
+2. Some of the guided projects  Some of the guided projects are below</description>
+    </item>
+    
+    <item>
+      <title>Software Defined Networking (SDN) Project Ideas</title>
+      <link>http://knetsolutions.in/sdn-project-ideas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-project-ideas/</guid>
+      <description>1. Addressing the Flow table fullfill(flow table exhaust) issue In Hardware Openflow switches, Flow table suffers from the limited storage due to the use of TCAM — on which the flow table is realized in the majority of existing equipments in industry to achieve fast forwarding. As a result, after the flow table is full filled, the switch behavior is unexpected on both forwarding and control plane.
+The reason of the fast flow entry occupation is due to the fine-grained flow entry storage of SDN.</description>
+    </item>
+    
+    <item>
+      <title>Testing IPv6 in Mininet</title>
+      <link>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</guid>
+      <description>Introduction  Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
+In this blog, we discuss about using the IPv6 addresses in the Mininet Topology. We also discuss about, How to do Ping and TCP, UDP Traffic Tests (IPerf) with IPv6 addresses.
+Some basic concepts of IPv6 addresses</description>
+    </item>
+    
+  </channel>
+</rss>

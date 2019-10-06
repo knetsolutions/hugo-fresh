@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>knetsolutions - Sofware Defined Networking (SDN) Training and Academic Projects</title>
+    
+<link rel="icon" type="image/png" href="http://knetsolutions.in/images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Open&#43;Sans:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/style.min.725726d488acfe4a75f8aef33c54d9c6f0d638d54190c6d14f26d63147b251fd.css" integrity="sha256-clcm1Iis/kp1&#43;K7zPFTZxvDWONVBkMbRTybWMUeyUf0=">
+<link rel="stylesheet" type="text/css" href="http://knetsolutions.in/css/icons.css">
+
+  </head>
+  <body>
+    
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+
+    
+
+    
+
+
+
+<nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/knet.svg" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+      <div id="navbar-menu" class="navbar-menu is-static">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-mobile">
+            <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+              <svg width="1000px" height="1000px">
+                <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                <path class="path2" d="M 300 500 L 700 500"></path>
+                <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+              </svg>
+              <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+            </div>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a href="/" class="navbar-item is-secondary">
+            Home
+          </a>
+          <a href="/services" class="navbar-item is-secondary">
+            Services
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              SDN Projects
+            </a>
+
+            <div class="navbar-dropdown">
+              <a href="/sdn-videos" class="navbar-item">
+                Videos
+              </a>
+              <a href="/sdn-projects" class="navbar-item">
+                Project Guidance
+              </a>
+              <a href="/sdn-project-ideas" class="navbar-item">
+                SDN Project Ideas
+              </a>
+              <a href="/sdn-mini-projects" class="navbar-item">
+                Mini Projects
+              </a>
+            </div>
+          </div>
+          <a href="/about" class="navbar-item is-secondary">
+            About Us
+          </a>
+        </div>
+      </div>
+  </div>
+</nav>
+
+
+
+
+
+<nav id="navbar-clone" class="navbar is-fresh is-transparent" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/images/logos/knet.svg" alt="" width="112" height="28">
+      </a>
+      <a class="navbar-item is-hidden-desktop is-hidden-tablet">
+        <div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+          <svg width="1000px" height="1000px">
+            <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+            <path class="path2" d="M 300 500 L 700 500"></path>
+            <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+          </svg>
+          <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+        </div>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="cloned-navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="cloned-navbar-menu" class="navbar-menu is-fixed">
+      <div class="navbar-start">
+        <a class="navbar-item is-hidden-mobile">
+          <div id="cloned-menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+            <svg width="1000px" height="1000px">
+              <path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+              <path class="path2" d="M 300 500 L 700 500"></path>
+              <path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+            </svg>
+            <button id="cloned-menu-icon-trigger" class="menu-icon-trigger"></button>
+          </div>
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <a href="/" class="navbar-item is-secondary">
+          Home
+        </a>
+        <a href="/services" class="navbar-item is-secondary">
+          Services
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            SDN Projects
+          </a>
+
+          <div class="navbar-dropdown">
+            <a href="/sdn-videos" class="navbar-item">
+              Videos
+            </a>
+            <a href="/sdn-projects" class="navbar-item">
+              Project Guidance
+            </a>
+            <a href="/sdn-project-ideas" class="navbar-item">
+              SDN Project Ideas
+            </a>
+            <a href="/sdn-mini-projects" class="navbar-item">
+              Mini Projects
+            </a>
+          </div>
+        </div>
+        <a href="/about" class="navbar-item is-secondary">
+          About Us
+        </a>
+      </div>
+    </div>
+</div>
+</nav>
+
+<section class="section is-medium">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-centered-tablet-portrait">
+        <h1 class="title section-title">Testing IPv6 in Mininet</h1>
+        <h5 class="subtitle is-5 is-muted"></h5>
+        <div class="divider"></div>
+      </div>
+    </div>
+    <ol>
+<li>Introduction</li>
+</ol>
+
+<p>Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.</p>
+
+<p>In this blog, we discuss about using the IPv6 addresses in the Mininet Topology. We also discuss about, How to do Ping and TCP, UDP Traffic Tests (IPerf) with IPv6 addresses.</p>
+
+<p>Some basic concepts of IPv6 addresses</p>
+
+<p>A. IPv6 Link Local Address</p>
+
+<p>Link-local address is a IPv6 unicast address that is valid only for communications within the network segment (link) or the broadcast domain. Link-local addresses are autoconfigured. Link local address prefix is FE80::/10 . Example Link local addresses are fe80::200:ff:fe00:<sup>1</sup>&frasl;<sub>64</sub>,fe80::200:ff:fe00:<sup>1</sup>&frasl;<sub>64</sub>.</p>
+
+<p>B. IPv6 Global Unicast Address</p>
+
+<p>The global unicast address is globally unique in the Internet. Examples: 2001::<sup>1</sup>&frasl;<sub>64</sub>, 2001::<sup>2</sup>&frasl;<sub>64</sub></p>
+
+<ol>
+<li>Testing</li>
+</ol>
+
+<p>Objective Lets use the RYU Controller with Mininet Single Topology(4 switchs).</p>
+
+<p>A. Start the Ryu controller</p>
+
+<p>Start the Ryu Controller with Simple Openflow 1.3 Switch application as below,</p>
+
+<pre><code>ryu-manager ryu.app.simple_switch_13
+</code></pre>
+
+<p>B. Create a Single Topology in Mininet</p>
+
+<pre><code>sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --switch=ovsk,protocols=OpenFlow13 --topo=single,4
+</code></pre>
+
+<p>C. Verify the Host IPv6 addresses</p>
+
+<p>In the mininet terminal, issue the below command,</p>
+
+<pre><code>h1 ifconfig h1-eth0 h2 ifconfig h2-eth0 h3 ifconfig h3-eth0 h4 ifconfig h4-eth0
+
+
+
+D. Ping Test between Host1 to Host2
+</code></pre>
+
+<p>ping6 utility is used for IPv6 Ping
+ Syntax :</p>
+
+<pre><code>ping6 -I [Link local address | Unicast address]
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>h1 ping6 -I h1-eth0 fe80::200:ff:fe00:2
+</code></pre>
+
+<p>E. IPERF TCP Test (Host1 to Host2)</p>
+
+<p>In IPERF &ldquo;-V&rdquo; option is used for enabling IPv6.</p>
+
+<p>To run the TCP server:</p>
+
+<p>Run this IPerf Server in Host2(h2)</p>
+
+<p>Note: open xterm for hosts, to run the iperf tests.</p>
+
+<pre><code>iperf -V -s
+</code></pre>
+
+<p>To run the TCP Client:</p>
+
+<p>Global Unicast Address</p>
+
+<pre><code>iperf -c -V
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>iperf -c 2001:2 -V
+</code></pre>
+
+<p>LinkLocal Address</p>
+
+<pre><code>iperf -c &lt;link local address%interface name&gt; -V Example: iperf -c fe80::200:ff:fe00:2%h1-eth0 -V
+</code></pre>
+
+<p>In our case, we are using the Link Local address, hence we using this below command,</p>
+
+<p>Run this IPerf Client in Host1(h1), connecting to h2.</p>
+
+<pre><code>iperf -c fe80::200:ff:fe00:2%h1-eth0 -V
+</code></pre>
+
+<p>Note: we need to specify IPv6 link local address in this &ldquo;IPv6-address%interface&rdquo; format.</p>
+
+<p>UDP Test is similar to above.
+ F. Testing in IPv6 Unicast address</p>
+
+<p>Assign the IPv6 global unicast address to hosts</p>
+
+<pre><code>h1 ifconfig h1-eth0 inet6 add 2001::1/64 h2 ifconfig h2-eth0 inet6 add 2001::2/64
+</code></pre>
+
+<p>Ping Test</p>
+
+<pre><code>h1 ping6 -I h1-eth0 2001::2
+
+h2 ping6 -I h2-eth0 2001::1
+</code></pre>
+
+<p>TCP Test</p>
+
+<p>Start the Tcp Server in h2</p>
+
+<pre><code>iperf -V -s
+</code></pre>
+
+<p>Start the Tcp Client in h1</p>
+
+<pre><code>iperf -c 2001::2 -V
+</code></pre>
+
+<p>E. To check the IPv6 routes</p>
+
+<pre><code>ip -6 route
+</code></pre>
+
+  </div>
+</section>
+
+
+
+    
+    <div id="backtotop"><a href="#"></a></div>
+
+    
+    
+<div class="sidebar">
+  <div class="sidebar-header">
+    <img src="/images/logos/fresh-white-alt.svg">
+    <a class="sidebar-close" href="javascript:void(0);">
+      <i data-feather="x"></i>
+    </a>
+  </div>
+  <div class="inner">
+    <ul class="sidebar-menu">
+      
+      <li>
+        <a href="/sdn-tutorials/mininet-tutorial/">
+          Mininet Basics
+        </a>
+      </li>
+      
+      <li>
+        <a href="/sdn-tutorials/mininet-cluster/">
+          Mininet Cluster
+        </a>
+      </li>
+      
+      <li>
+        <a href="/sdn-tutorials/openflow-tutorial/">
+          OpenFlow Tutorial
+        </a>
+      </li>
+      
+      <li>
+        <a href="/sdn-tutorials/testing-ipv6-in-mininet/">
+          Testing IPv6 in Mininet
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src="http://knetsolutions.in/js/fresh.js"></script>
+<script src="http://knetsolutions.in/js/jquery.panelslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </body>
+</html>
