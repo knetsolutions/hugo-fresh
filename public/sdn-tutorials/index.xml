@@ -16,9 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</guid>
-      <description>To check the mininet version
-mn --version  To clean up the existing ovs bridges and namespaces
-  Note: sometime we mistakenly closed the mininet shell, or mininet crashed. But the topology components will continue to exists. To clean such stuff, cleanup command is used.</description>
+      <description>1. To check the mininet version mn --version  2. To clean up the existing ovs bridges and namespaces Note: sometime we mistakenly closed the mininet shell, or mininet crashed. But the topology components will continue to exists. To clean such stuff, cleanup command is used.</description>
     </item>
     
     <item>
@@ -27,7 +25,7 @@ mn --version  To clean up the existing ovs bridges and namespaces
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://knetsolutions.in/sdn-tutorials/mininet-cluster/</guid>
-      <description>Introduction  Generally we use mininet to simulate the topology in a single system/computer/virutal machine. The System resources limits our topology size.
+      <description>1. Introduction Generally we use mininet to simulate the topology in a single system/computer/virutal machine. The System resources limits our topology size.
 Suppose, we want to build the large topology with 1000s of switches and nodes. We cannot build this topology in single system. The solution is, we can build the subset of the topology in mulitiple systems and connect each other system via GRE Tunnel.</description>
     </item>
     
@@ -37,15 +35,14 @@ Suppose, we want to build the large topology with 1000s of switches and nodes. W
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://knetsolutions.in/sdn-tutorials/openflow-tutorial/</guid>
-      <description>Introduction  The OPENFLOW specification covers the components and the basic functions of the switch, and the OpenFlow switch protocol to manage an OpenFlow switch from a remote OpenFlow controller.
+      <description>1. Introduction The OPENFLOW specification covers the components and the basic functions of the switch, and the OpenFlow switch protocol to manage an OpenFlow switch from a remote OpenFlow controller.
 Openflow Version Details:
 Openflow 1.1
 Openflow 1.2
 Openflow 1.3
 Openflow 1.4
 Openflow 1.5
-Most widley supported: 1.3 2. Switch Components
-An OpenFlow Logical Switch consists of one or more flow tables and a group table, which perform packet lookups and forwarding, and one or more OpenFlow channels to an external controller (Figure 1).</description>
+Most widley supported: 1.3</description>
     </item>
     
     <item>
@@ -54,9 +51,10 @@ An OpenFlow Logical Switch consists of one or more flow tables and a group table
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</guid>
-      <description>Introduction  Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
+      <description>1. Introduction Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
 In this blog, we discuss about using the IPv6 addresses in the Mininet Topology. We also discuss about, How to do Ping and TCP, UDP Traffic Tests (IPerf) with IPv6 addresses.
-Some basic concepts of IPv6 addresses</description>
+Some basic concepts of IPv6 addresses
+A. IPv6 Link Local Address Link-local address is a IPv6 unicast address that is valid only for communications within the network segment (link) or the broadcast domain.</description>
     </item>
     
   </channel>

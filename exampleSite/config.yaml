@@ -46,16 +46,16 @@ params:
       url: /sdn-project-ideas
     - title: Mini Projects
       url: /sdn-mini-projects
-  # - title: Blog
-  #   sublinks:
-  #   - title: Testing IPv6 in Mininet
-  #     url: /sdn-tutorials/testing-ipv6-in-mininet
-  #   - title: Mininet Cluster
-  #     url: /sdn-tutorials/mininet-cluster
-  #   - title: Openflow 
-  #     url: /sdn-tutorials/openflow-tutorial
-  #   - title: Mininet 
-  #     url: /sdn-tutorials/mininet-tutorial   
+  - title: Blog
+    sublinks:
+    - title: Testing IPv6 in Mininet
+      url: /sdn-tutorials/testing-ipv6-in-mininet
+    - title: Mininet Cluster
+      url: /sdn-tutorials/mininet-cluster
+    - title: Openflow 
+      url: /sdn-tutorials/openflow-tutorial
+    - title: Mininet 
+      url: /sdn-tutorials/mininet-tutorial   
   - title: About Us
     url: /about
   section1:

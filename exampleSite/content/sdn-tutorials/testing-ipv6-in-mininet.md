@@ -5,7 +5,7 @@ sidebarlogo: fresh-white-alt
 ---
 
 
-1. Introduction
+{{% title3 "1. Introduction" %}}
 
 Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
 
@@ -13,20 +13,23 @@ In this blog, we discuss about using the IPv6 addresses in the Mininet Topology.
 
 Some basic concepts of IPv6 addresses
 
-A. IPv6 Link Local Address
+{{% title4 "A. IPv6 Link Local Address" %}}
 
-Link-local address is a IPv6 unicast address that is valid only for communications within the network segment (link) or the broadcast domain. Link-local addresses are autoconfigured. Link local address prefix is FE80::/10 . Example Link local addresses are fe80::200:ff:fe00:1/64,fe80::200:ff:fe00:1/64.
+Link-local address is a IPv6 unicast address that is valid only for communications within the network segment (link) or the broadcast domain. Link-local addresses are autoconfigured. Link local address prefix is ```FE80::/10 ```. 
 
-B. IPv6 Global Unicast Address
+Example Link local addresses are ```fe80::200:ff:fe00:1/64```,```fe80::200:ff:fe00:1/64```.
 
-The global unicast address is globally unique in the Internet. Examples: 2001::1/64, 2001::2/64
+{{% title4 "B. IPv6 Global Unicast Address" %}}
+
+The global unicast address is globally unique in the Internet. Examples: ```2001::1/64```, ```2001::2/64```
 
 
-2. Testing
+{{% title3 "2. Testing" %}}
 
 Objective Lets use the RYU Controller with Mininet Single Topology(4 switchs).
 
-A. Start the Ryu controller
+{{% title4 "A. Start the Ryu controller" %}}
+
 
 Start the Ryu Controller with Simple Openflow 1.3 Switch application as below,
 
@@ -34,24 +37,28 @@ Start the Ryu Controller with Simple Openflow 1.3 Switch application as below,
 
 
 
-B. Create a Single Topology in Mininet
+
+{{% title4 "B. Create a Single Topology in Mininet" %}}
 
     sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --switch=ovsk,protocols=OpenFlow13 --topo=single,4
 
 
+{{% title4 "C. Verify the Host IPv6 addresses" %}}
 
-C. Verify the Host IPv6 addresses
 
 In the mininet terminal, issue the below command,
+```
+    h1 ifconfig h1-eth0 
+    h2 ifconfig h2-eth0 
+    h3 ifconfig h3-eth0 
+    h4 ifconfig h4-eth0
+```
+{{% title4 "D. Ping Test between Host1 to Host2" %}}
 
-    h1 ifconfig h1-eth0 h2 ifconfig h2-eth0 h3 ifconfig h3-eth0 h4 ifconfig h4-eth0
-
-
-
-	D. Ping Test between Host1 to Host2
 
 ping6 utility is used for IPv6 Ping
- Syntax :
+
+Syntax :
 
     ping6 -I [Link local address | Unicast address]
 
@@ -60,12 +67,12 @@ Example:
     h1 ping6 -I h1-eth0 fe80::200:ff:fe00:2
 
 
+{{% title4 "E. IPERF TCP Test (Host1 to Host2)" %}}
 
-E. IPERF TCP Test (Host1 to Host2)
 
 In IPERF "-V" option is used for enabling IPv6.
 
-To run the TCP server:
+**To run the TCP server:**
 
 Run this IPerf Server in Host2(h2)
 
@@ -95,13 +102,17 @@ Run this IPerf Client in Host1(h1), connecting to h2.
 
 Note: we need to specify IPv6 link local address in this "IPv6-address%interface" format.
 
-
 UDP Test is similar to above.
- F. Testing in IPv6 Unicast address
+
+
+
+{{% title4 "F. Testing in IPv6 Unicast address" %}}
+
 
 Assign the IPv6 global unicast address to hosts
 
-    h1 ifconfig h1-eth0 inet6 add 2001::1/64 h2 ifconfig h2-eth0 inet6 add 2001::2/64
+    h1 ifconfig h1-eth0 inet6 add 2001::1/64
+    h2 ifconfig h2-eth0 inet6 add 2001::2/64
 
 Ping Test
 
@@ -119,6 +130,6 @@ Start the Tcp Client in h1
 
     iperf -c 2001::2 -V
 
- E. To check the IPv6 routes
+To check the IPv6 routes
 
     ip -6 route
