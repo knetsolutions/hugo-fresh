@@ -13,6 +13,7 @@ git clone https://github.com/knetsolutions/hugo-fresh themes/hugo-fresh
 rm config.toml
 cp themes/hugo-fresh/exampleSite/config.yaml .
 cp themes/hugo-fresh/exampleSite/content/* content/. -rf
+cp themes/hugo-fresh/static/mininet static/. -rf
 
 
 5. Start the server

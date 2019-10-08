@@ -5,6 +5,8 @@ sidebarlogo: fresh-white-alt
 ---
 
 
+{{< figure src="/mininet/testing_ipv6_header.jpg" >}}
+<br>
 {{% title3 "1. Introduction" %}}
 
 Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
@@ -13,21 +15,25 @@ In this blog, we discuss about using the IPv6 addresses in the Mininet Topology.
 
 Some basic concepts of IPv6 addresses
 
+<br>
 {{% title4 "A. IPv6 Link Local Address" %}}
 
 Link-local address is a IPv6 unicast address that is valid only for communications within the network segment (link) or the broadcast domain. Link-local addresses are autoconfigured. Link local address prefix is ```FE80::/10 ```. 
 
 Example Link local addresses are ```fe80::200:ff:fe00:1/64```,```fe80::200:ff:fe00:1/64```.
 
+<br>
 {{% title4 "B. IPv6 Global Unicast Address" %}}
 
 The global unicast address is globally unique in the Internet. Examples: ```2001::1/64```, ```2001::2/64```
 
+<br>
 
 {{% title3 "2. Testing" %}}
 
 Objective Lets use the RYU Controller with Mininet Single Topology(4 switchs).
 
+<br>
 {{% title4 "A. Start the Ryu controller" %}}
 
 
@@ -35,14 +41,17 @@ Start the Ryu Controller with Simple Openflow 1.3 Switch application as below,
 
     ryu-manager ryu.app.simple_switch_13
 
+{{< figure src="/mininet/ipv6_ryu1.jpg" >}}
 
 
-
+<br>
 {{% title4 "B. Create a Single Topology in Mininet" %}}
 
     sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --switch=ovsk,protocols=OpenFlow13 --topo=single,4
 
+{{< figure src="/mininet/ipv6_mininet1.jpg" >}}
 
+<br>
 {{% title4 "C. Verify the Host IPv6 addresses" %}}
 
 
@@ -53,6 +62,10 @@ In the mininet terminal, issue the below command,
     h3 ifconfig h3-eth0 
     h4 ifconfig h4-eth0
 ```
+
+{{< figure src="/mininet/ipv6_address.jpg" >}}
+
+<br>
 {{% title4 "D. Ping Test between Host1 to Host2" %}}
 
 
@@ -67,6 +80,8 @@ Example:
     h1 ping6 -I h1-eth0 fe80::200:ff:fe00:2
 
 
+{{< figure src="/mininet/ipv6_ping_output.jpg" >}}
+<br>
 {{% title4 "E. IPERF TCP Test (Host1 to Host2)" %}}
 
 
@@ -102,10 +117,14 @@ Run this IPerf Client in Host1(h1), connecting to h2.
 
 Note: we need to specify IPv6 link local address in this "IPv6-address%interface" format.
 
+
+{{< figure src="/mininet/ipv6_iperf_test.jpg" >}}
+
+
 UDP Test is similar to above.
 
 
-
+<br>
 {{% title4 "F. Testing in IPv6 Unicast address" %}}
 
 
