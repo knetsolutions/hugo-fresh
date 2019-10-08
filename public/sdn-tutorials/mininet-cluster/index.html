@@ -223,11 +223,89 @@
         <div class="divider"></div>
       </div>
     </div>
-    <h3 class="title is-3">1. Introduction</h3>
+    <figure>
+    <img src="/mininet/cluster_header.jpg"/> 
+</figure>
+
+
+<h3 class="title is-3">1. Introduction</h3>
 
 <p>Generally we use mininet to simulate the topology in a single system/computer/virutal machine. The System resources limits our topology size.</p>
 
 <p>Suppose, we want to build the large topology with 1000s of switches and nodes. We cannot build this topology in single system. The solution is, we can build the subset of the topology in mulitiple systems and connect each other system via GRE Tunnel.</p>
+
+<p><br></p>
+
+<h3 class="title is-3">2. Demonstration</h3>
+
+<p>Lets take the simple topology and demonstrated on deploying on two VMs, interconnect the topology and ping the nodes.</p>
+
+<p>This is original topology.</p>
+
+<figure>
+    <img src="/mininet/cluster1.jpg"/> 
+</figure>
+
+
+<p>The deployment model of this topology is as below.</p>
+
+<figure>
+    <img src="/mininet/cluster2.jpg"/> 
+</figure>
+
+
+<ul>
+
+<li>1. We are going to split the original topology in to two small topologies.</li>
+<br>
+<li>2. In our diagram, S1, h1, h2 will be considered as topology1, will be  deployed in computer1.</li>
+<br>
+<li>3. S2, h3, h4 will be considered as topology2, will be deployed in computer2.</li>
+<br>
+<li>4. We must note down the IP Address of the both computers for establishing GRE Tunnel.  This IP Address details will be used in the topology file.</li>
+<br>
+<li>5. The example topology files can be downloaded from here. (Computer1 IP : 192.168.122.1,  Computer2 IP: 192.168.122.2)
+<br>
+
+<a href="/files/cluster_topo1.py.txt">Topology1</a>
+<br>
+<a href="/files/cluster_topo2.py.txt">Topology2</a>
+
+<br>
+
+</li>
+<br>
+<li>6. Both topology is connected to the one RYU SDN controller (we run RYU SDN controller on computer1).</li>
+<br>
+
+</ul>
+
+<h4 class="title is-4">In Computer1</h4>
+
+<ol>
+<li><p>Start the RYU SDN Controller with simple switch application</p>
+
+<pre><code>ryu-manager ryu.app.simple_switch_13
+</code></pre></li>
+
+<li><p>Start the mininet topology</p>
+
+<pre><code>sudo python cluster_topo1.py
+</code></pre>
+
+<p><br>
+s
+<h4 class="title is-4">In Computer2</h4></p></li>
+
+<li><p>Start the mininet topology</p>
+
+<pre><code>sudo python cluster_topo2.py
+</code></pre></li>
+
+<li><p>From computer1 mininet shell, ping h1, h2, h3, h4 host IPs.</p></li>
+
+<li><p>you can also verify the GRE interface of both computers using &ldquo;ifconfig&rdquo; command.</p></li>
+</ol>
 
   </div>
 </section>

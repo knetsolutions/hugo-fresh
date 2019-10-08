@@ -35,7 +35,9 @@
       
       <guid>http://knetsolutions.in/sdn-tutorials/mininet-cluster/</guid>
       <description>1. Introduction Generally we use mininet to simulate the topology in a single system/computer/virutal machine. The System resources limits our topology size.
-Suppose, we want to build the large topology with 1000s of switches and nodes. We cannot build this topology in single system. The solution is, we can build the subset of the topology in mulitiple systems and connect each other system via GRE Tunnel.</description>
+Suppose, we want to build the large topology with 1000s of switches and nodes. We cannot build this topology in single system. The solution is, we can build the subset of the topology in mulitiple systems and connect each other system via GRE Tunnel.
+
+2. Demonstration Lets take the simple topology and demonstrated on deploying on two VMs, interconnect the topology and ping the nodes.</description>
     </item>
     
     <item>
@@ -133,10 +135,10 @@ The reason of the fast flow entry occupation is due to the fine-grained flow ent
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</guid>
-      <description>1. Introduction Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
+      <description>1. Introduction
+Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
 In this blog, we discuss about using the IPv6 addresses in the Mininet Topology. We also discuss about, How to do Ping and TCP, UDP Traffic Tests (IPerf) with IPv6 addresses.
-Some basic concepts of IPv6 addresses
-A. IPv6 Link Local Address Link-local address is a IPv6 unicast address that is valid only for communications within the network segment (link) or the broadcast domain.</description>
+Some basic concepts of IPv6 addresses</description>
     </item>
     
   </channel>
