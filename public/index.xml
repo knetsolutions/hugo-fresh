@@ -20,15 +20,6 @@
     </item>
     
     <item>
-      <title>Mininet Basics</title>
-      <link>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</guid>
-      <description>1. To check the mininet version mn --version  2. To clean up the existing ovs bridges and namespaces Note: sometime we mistakenly closed the mininet shell, or mininet crashed. But the topology components will continue to exists. To clean such stuff, cleanup command is used.</description>
-    </item>
-    
-    <item>
       <title>Mininet Cluster</title>
       <link>http://knetsolutions.in/sdn-tutorials/mininet-cluster/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -38,6 +29,17 @@
 Suppose, we want to build the large topology with 1000s of switches and nodes. We cannot build this topology in single system. The solution is, we can build the subset of the topology in mulitiple systems and connect each other system via GRE Tunnel.
 
 2. Demonstration Lets take the simple topology and demonstrated on deploying on two VMs, interconnect the topology and ping the nodes.</description>
+    </item>
+    
+    <item>
+      <title>Mininet Tutorial</title>
+      <link>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</guid>
+      <description>Mininet creates a realistic virtual network, running real kernel, switch and application code, on a single machine (VM, cloud or native), in seconds, with a single command &amp;#39;mn&amp;#39;.   
+Primary usecase of Mininet is test environment(LAB) for Software Defined Networking (SDN) OpenFlow Protocol. It is used much beyond with many use cases. 
+This is a series of Tutorials. Part1 - Mininet Introduction Part2 - Running Traffic Tests Part3 - Writing Custom Topology Part4 - Testing IPv6 in Mininet Part5 - Mininet Cluster</description>
     </item>
     
     <item>
@@ -66,6 +68,68 @@ Most widley supported: 1.3</description>
  -10% advance -50% Milestone1. -40% Final. Payment Methods
  For International Students: Paypal, - 8% Transcational charges applicable
  For Indian Students: Bank Transfer - 18% GST applicable</description>
+    </item>
+    
+    <item>
+      <title>PART1 - Mininet Introduction</title>
+      <link>http://knetsolutions.in/sdn-tutorials/mininet-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/mininet-introduction/</guid>
+      <description>Mininet creates a realistic virtual network, running real kernel, switch and application code, on a single machine (VM, cloud or native), in seconds, with a single command &amp;#39;mn&amp;#39;.   
+1. Installation
+O.S : UBUNTU 18.04
+
+A. RYU installation
+sudo pip install ryu  
+To verify :
+ryu-manager --version  Example:
+suresh@suresh-vm:~$ ryu-manager --version ryu-manager 4.31 suresh@suresh-vm:~$  
+Note: Make sure you do with &amp;ldquo;sudo pip install ryu&amp;rdquo; .</description>
+    </item>
+    
+    <item>
+      <title>Part2 - Mininet Traffic Tests</title>
+      <link>http://knetsolutions.in/sdn-tutorials/mininet-traffic-tests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/mininet-traffic-tests/</guid>
+      <description>1. TCP Traffic Tests 
+A. Start the Mininet Topology 
+  sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --switch=ovsk,protocols=OpenFlow13 --topo=linear,4 -x  
+B. Run the IPERF TCP Server 
+h2 iperf -s  -s means server mode
+
+C. RUN IPERF TCP Client 
+h1 iperf -c 10.1.1.4 -i 10 -t 30 h1 iperf -c 10.1.1.4 -i 10 -b 10m -t 30 h1 iperf -c 10.1.1.4 -i 10 -P 10 -t 30</description>
+    </item>
+    
+    <item>
+      <title>Part3 - Mininet Custom Topology</title>
+      <link>http://knetsolutions.in/sdn-tutorials/mininet-custom-topology/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/mininet-custom-topology/</guid>
+      <description>1. Writing Custom Topology in Mininet
+
+mininet exposes the python API. We can create a custom topologies using the python API with few lines of code.
+A. How to write Custom Topology in Mininet 
+Steps are below.  Import the python required libraries  
+from mininet.topo import Topo from mininet.net import Mininet  
+ Write the Topology definition class  
+ class SingleSwitchTopo(Topo): def build(self): s1 = self.</description>
+    </item>
+    
+    <item>
+      <title>Part4 - Testing IPv6 in Mininet</title>
+      <link>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</guid>
+      <description>1. Introduction
+Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
+In this blog, we discuss about using the IPv6 addresses in the Mininet Topology. We also discuss about, How to do Ping and TCP, UDP Traffic Tests (IPerf) with IPv6 addresses.
+Some basic concepts of IPv6 addresses</description>
     </item>
     
     <item>
@@ -127,18 +191,6 @@ we work online and conducts project training in gotomeeting. so no restriction o
       <guid>http://knetsolutions.in/sdn-project-ideas/</guid>
       <description>1. Addressing the Flow table fullfill(flow table exhaust) issue In Hardware Openflow switches, Flow table suffers from the limited storage due to the use of TCAM — on which the flow table is realized in the majority of existing equipments in industry to achieve fast forwarding. As a result, after the flow table is full filled, the switch behavior is unexpected on both forwarding and control plane.
 The reason of the fast flow entry occupation is due to the fine-grained flow entry storage of SDN.</description>
-    </item>
-    
-    <item>
-      <title>Testing IPv6 in Mininet</title>
-      <link>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</guid>
-      <description>1. Introduction
-Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.
-In this blog, we discuss about using the IPv6 addresses in the Mininet Topology. We also discuss about, How to do Ping and TCP, UDP Traffic Tests (IPerf) with IPv6 addresses.
-Some basic concepts of IPv6 addresses</description>
     </item>
     
   </channel>

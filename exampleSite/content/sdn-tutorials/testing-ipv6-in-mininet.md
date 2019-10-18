@@ -1,5 +1,5 @@
 ---
-title: Testing IPv6 in Mininet
+title: Part4 - Testing IPv6 in Mininet
 sidebar: true
 sidebarlogo: fresh-white-alt
 ---
@@ -152,3 +152,10 @@ Start the Tcp Client in h1
 To check the IPv6 routes
 
     ip -6 route
+
+
+<br>
+<br>
+{{% title5 "Continue with next part" %}}
+<a href="/sdn-tutorials/mininet-cluster">Part5 - Mininet Cluster</a>
+

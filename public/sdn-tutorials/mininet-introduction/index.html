@@ -218,186 +218,244 @@
   <div class="container">
     <div class="columns">
       <div class="column is-centered-tablet-portrait">
-        <h1 class="title section-title">Part4 - Testing IPv6 in Mininet</h1>
+        <h1 class="title section-title">PART1 - Mininet Introduction</h1>
         <h5 class="subtitle is-5 is-muted"></h5>
         <div class="divider"></div>
       </div>
     </div>
-    <p><figure>
-    <img src="/mininet/testing_ipv6_header.jpg"/> 
+    <h5 class="title is-5">Mininet creates a realistic virtual network, running real kernel, switch and application code, on a single machine (VM, cloud or native), in seconds, with a single command &#39;mn&#39;.</h5>
+
+<figure>
+    <img src="/mininet/mininet_1.png"/> 
 </figure>
 
-<br>
-<h3 class="title is-3">1. Introduction</h3></p>
 
-<p>Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.</p>
+<p><br><br>
+<h4 class="title is-4">1. Installation</h4></p>
 
-<p>In this blog, we discuss about using the IPv6 addresses in the Mininet Topology. We also discuss about, How to do Ping and TCP, UDP Traffic Tests (IPerf) with IPv6 addresses.</p>
-
-<p>Some basic concepts of IPv6 addresses</p>
+<p>O.S :  UBUNTU 18.04</p>
 
 <p><br>
-<h4 class="title is-4">A. IPv6 Link Local Address</h4></p>
+<h5 class="title is-5">A. RYU installation</h5></p>
 
-<p>Link-local address is a IPv6 unicast address that is valid only for communications within the network segment (link) or the broadcast domain. Link-local addresses are autoconfigured. Link local address prefix is <code>FE80::/10</code>.</p>
-
-<p>Example Link local addresses are <code>fe80::200:ff:fe00:1/64</code>,<code>fe80::200:ff:fe00:1/64</code>.</p>
-
-<p><br>
-<h4 class="title is-4">B. IPv6 Global Unicast Address</h4></p>
-
-<p>The global unicast address is globally unique in the Internet. Examples: <code>2001::1/64</code>, <code>2001::2/64</code></p>
+<pre><code>sudo pip install ryu
+</code></pre>
 
 <p><br></p>
 
-<h3 class="title is-3">2. Testing</h3>
+<p>To verify :</p>
 
-<p>Objective Lets use the RYU Controller with Mininet Single Topology(4 switchs).</p>
+<pre><code>ryu-manager --version
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>suresh@suresh-vm:~$ ryu-manager --version
+ryu-manager 4.31
+suresh@suresh-vm:~$ 
+</code></pre>
+
+<p><br></p>
+
+<p>Note: Make sure you do with &ldquo;sudo pip install ryu&rdquo; . ryu package will install ryu-manager binary in /usr/local/bin folder. Hence installation requires sudo access.</p>
+
+<p><br><br></p>
+
+<h5 class="title is-5">B. Mininet installation</h5>
+
+<pre><code>sudo apt-get install mininet
+</code></pre>
+
+<p>To verify :</p>
+
+<pre><code>mn --version
+</code></pre>
+
+<p>Log:</p>
+
+<pre><code>suresh@suresh-vm:~$mn --version
+2.2.2
+suresh@suresh-vm:~$ 
+</code></pre>
+
+<p><br><br></p>
+
+<h4 class="title is-4">2. Basic Topologies</h4>
 
 <p><br>
-<h4 class="title is-4">A. Start the Ryu controller</h4></p>
+<h5 class="title is-5">A. Single Topology</h5></p>
 
-<p>Start the Ryu Controller with Simple Openflow 1.3 Switch application as below,</p>
+<p>Topology with Single Switch and 4 Nodes.</p>
+
+<figure>
+    <img src="/mininet/simple_topology.png"/> 
+</figure>
+
+
+<p>RYU SDN Controller</p>
 
 <pre><code>ryu-manager ryu.app.simple_switch_13
 </code></pre>
 
-<figure>
-    <img src="/mininet/ipv6_ryu1.jpg"/> 
-</figure>
-
-
-<p><br>
-<h4 class="title is-4">B. Create a Single Topology in Mininet</h4></p>
+<p>Mininet Topology</p>
 
 <pre><code>sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --switch=ovsk,protocols=OpenFlow13 --topo=single,4
 </code></pre>
 
-<figure>
-    <img src="/mininet/ipv6_mininet1.jpg"/> 
-</figure>
+<table>
+<thead>
+<tr>
+<th>options</th>
+<th>Description</th>
+</tr>
+</thead>
 
+<tbody>
+<tr>
+<td>&ndash;controller</td>
+<td>type of controller local/remote and remote controller ip.</td>
+</tr>
 
-<p><br>
-<h4 class="title is-4">C. Verify the Host IPv6 addresses</h4></p>
+<tr>
+<td></td>
+<td></td>
+</tr>
 
-<p>In the mininet terminal, issue the below command,</p>
+<tr>
+<td>&ndash;mac</td>
+<td>mac address starts with 00:00:00:00:00:01</td>
+</tr>
 
-<pre><code>    h1 ifconfig h1-eth0 
-    h2 ifconfig h2-eth0 
-    h3 ifconfig h3-eth0 
-    h4 ifconfig h4-eth0
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>-i</td>
+<td>IP Subnets for the Topology</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>&ndash;switch</td>
+<td>Switch type (ovsk - openvswitch kernel module), and openflow version.</td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>&ndash;topo</td>
+<td>topology type(linear,minimal,reversed,single,torus,tree) and params.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Once you are done, make sure &ldquo;exit&rdquo; the mininet shell,
+&gt;exit</p>
+
+<p>Example:</p>
+
+<pre><code>mininet&gt; exit
+*** Stopping 1 controllers
+c0 
+*** Stopping 4 links
+....
+*** Stopping 1 switches
+s1 
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+completed in 2.604 seconds
+suresh@suresh-vm:~$ 
 </code></pre>
 
+<p><br><br>
+<h5 class="title is-5">B. Linear Topology</h5></p>
+
+<p>linear topology (where each switch has one host, and all switches connect in a line)</p>
+
 <figure>
-    <img src="/mininet/ipv6_address.jpg"/> 
+    <img src="/mininet/linear_topology.png"/> 
 </figure>
 
 
+<pre><code>sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --switch=ovsk,protocols=OpenFlow13 --topo=linear,4
+</code></pre>
+
+<p><br><br></p>
+
+<h5 class="title is-5">B. Tree Topology</h5>
+
+<figure>
+    <img src="/mininet/tree_topology.png"/> 
+</figure>
+
+
+<pre><code>sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --topo=tree,depth=2,fanout=3
+
+</code></pre>
+
+<p>fanout : each switch is connected to these many childs
+depth : depth of the tree</p>
+
+<p><br><br></p>
+
+<h4 class="title is-4">3. Mininet Basic Shell Commands</h4>
+
 <p><br>
-<h4 class="title is-4">D. Ping Test between Host1 to Host2</h4></p>
+<h5 class="title is-5">Informative commands</h5></p>
 
-<p>ping6 utility is used for IPv6 Ping</p>
+<pre><code>help
+dump
+net
+links
+</code></pre>
 
-<p>Syntax :</p>
+<h5 class="title is-5">Action commands</h5>
 
-<pre><code>ping6 -I [Link local address | Unicast address]
+<pre><code>pingall
+</code></pre>
+
+<h5 class="title is-5">Execute the commands in HOST/Node</h5>
+
+<p>Option1:
+<br></p>
+
+<p>we can login to each host using &lsquo;xterm&rsquo; command</p>
+
+<pre><code>mininet&gt;xterm h1
+</code></pre>
+
+<p>It will open a xterm terminal for the host. Now we can execute the command inside that terminal</p>
+
+<p>Option2:
+<br>
+we can directly execute from the mininet shell.</p>
+
+<pre><code>mininet&gt;&lt;hostname&gt; command
 </code></pre>
 
 <p>Example:</p>
 
-<pre><code>h1 ping6 -I h1-eth0 fe80::200:ff:fe00:2
+<pre><code>mininet&gt;h1 ifconfig
+mininet&gt;h1 ping h2
+mininet&gt;h1 ip route
 </code></pre>
 
-<p><figure>
-    <img src="/mininet/ipv6_ping_output.jpg"/> 
-</figure>
-
-<br>
-<h4 class="title is-4">E. IPERF TCP Test (Host1 to Host2)</h4></p>
-
-<p>In IPERF &ldquo;-V&rdquo; option is used for enabling IPv6.</p>
-
-<p><strong>To run the TCP server:</strong></p>
-
-<p>Run this IPerf Server in Host2(h2)</p>
-
-<p>Note: open xterm for hosts, to run the iperf tests.</p>
-
-<pre><code>iperf -V -s
-</code></pre>
-
-<p>To run the TCP Client:</p>
-
-<p>Global Unicast Address</p>
-
-<pre><code>iperf -c -V
-</code></pre>
-
-<p>Example:</p>
-
-<pre><code>iperf -c 2001:2 -V
-</code></pre>
-
-<p>LinkLocal Address</p>
-
-<pre><code>iperf -c &lt;link local address%interface name&gt; -V Example: iperf -c fe80::200:ff:fe00:2%h1-eth0 -V
-</code></pre>
-
-<p>In our case, we are using the Link Local address, hence we using this below command,</p>
-
-<p>Run this IPerf Client in Host1(h1), connecting to h2.</p>
-
-<pre><code>iperf -c fe80::200:ff:fe00:2%h1-eth0 -V
-</code></pre>
-
-<p>Note: we need to specify IPv6 link local address in this &ldquo;IPv6-address%interface&rdquo; format.</p>
-
-<figure>
-    <img src="/mininet/ipv6_iperf_test.jpg"/> 
-</figure>
-
-
-<p>UDP Test is similar to above.</p>
-
-<p><br>
-<h4 class="title is-4">F. Testing in IPv6 Unicast address</h4></p>
-
-<p>Assign the IPv6 global unicast address to hosts</p>
-
-<pre><code>h1 ifconfig h1-eth0 inet6 add 2001::1/64
-h2 ifconfig h2-eth0 inet6 add 2001::2/64
-</code></pre>
-
-<p>Ping Test</p>
-
-<pre><code>h1 ping6 -I h1-eth0 2001::2
-
-h2 ping6 -I h2-eth0 2001::1
-</code></pre>
-
-<p>TCP Test</p>
-
-<p>Start the Tcp Server in h2</p>
-
-<pre><code>iperf -V -s
-</code></pre>
-
-<p>Start the Tcp Client in h1</p>
-
-<pre><code>iperf -c 2001::2 -V
-</code></pre>
-
-<p>To check the IPv6 routes</p>
-
-<pre><code>ip -6 route
-</code></pre>
-
-<p><br>
-<br>
+<p>we can use either method to run the Traffic tests or executing the commands.
+<br><br>
 <h5 class="title is-5">Continue with next part</h5></p>
 
-<p><a href="/sdn-tutorials/mininet-cluster">Part5 - Mininet Cluster</a></p>
+<p><a href="/sdn-tutorials/mininet-traffic-tests">Part2 - Running Traffic Tests</a>
+<br></p>
 
   </div>
 </section>

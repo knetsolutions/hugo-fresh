@@ -218,186 +218,124 @@
   <div class="container">
     <div class="columns">
       <div class="column is-centered-tablet-portrait">
-        <h1 class="title section-title">Part4 - Testing IPv6 in Mininet</h1>
+        <h1 class="title section-title">Part2 - Mininet Traffic Tests</h1>
         <h5 class="subtitle is-5 is-muted"></h5>
         <div class="divider"></div>
       </div>
     </div>
-    <p><figure>
-    <img src="/mininet/testing_ipv6_header.jpg"/> 
-</figure>
-
-<br>
-<h3 class="title is-3">1. Introduction</h3></p>
-
-<p>Generally we use IPv4 in all our networking devices/environment/test bed. But Some special cases requires IPv6 address. There are plenty of resources available in the internet for Mininet with IPv4.</p>
-
-<p>In this blog, we discuss about using the IPv6 addresses in the Mininet Topology. We also discuss about, How to do Ping and TCP, UDP Traffic Tests (IPerf) with IPv6 addresses.</p>
-
-<p>Some basic concepts of IPv6 addresses</p>
-
-<p><br>
-<h4 class="title is-4">A. IPv6 Link Local Address</h4></p>
-
-<p>Link-local address is a IPv6 unicast address that is valid only for communications within the network segment (link) or the broadcast domain. Link-local addresses are autoconfigured. Link local address prefix is <code>FE80::/10</code>.</p>
-
-<p>Example Link local addresses are <code>fe80::200:ff:fe00:1/64</code>,<code>fe80::200:ff:fe00:1/64</code>.</p>
-
-<p><br>
-<h4 class="title is-4">B. IPv6 Global Unicast Address</h4></p>
-
-<p>The global unicast address is globally unique in the Internet. Examples: <code>2001::1/64</code>, <code>2001::2/64</code></p>
+    <h4 class="title is-4">1. TCP Traffic Tests</h4>
 
 <p><br></p>
 
-<h3 class="title is-3">2. Testing</h3>
-
-<p>Objective Lets use the RYU Controller with Mininet Single Topology(4 switchs).</p>
+<h5 class="title is-5">A. Start the Mininet Topology</h5>
 
 <p><br>
-<h4 class="title is-4">A. Start the Ryu controller</h4></p>
-
-<p>Start the Ryu Controller with Simple Openflow 1.3 Switch application as below,</p>
-
-<pre><code>ryu-manager ryu.app.simple_switch_13
-</code></pre>
-
 <figure>
-    <img src="/mininet/ipv6_ryu1.jpg"/> 
+    <img src="/mininet/linear_topology.png"/> 
 </figure>
 
+<br></p>
+
+<pre><code>sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --switch=ovsk,protocols=OpenFlow13 --topo=linear,4  -x
+</code></pre>
+
+<p><br></p>
+
+<h5 class="title is-5">B. Run the IPERF TCP Server</h5>
+
+<p><br></p>
+
+<pre><code>h2 iperf -s
+
+</code></pre>
+
+<p>-s means server mode</p>
+
+<p><br></p>
+
+<h5 class="title is-5">C. RUN IPERF TCP Client</h5>
+
+<p><br></p>
+
+<pre><code>h1 iperf -c 10.1.1.4 -i 10 -t 30
+h1 iperf -c 10.1.1.4 -i 10 -b 10m -t 30
+h1 iperf -c 10.1.1.4 -i 10 -P 10 -t 30
+
+</code></pre>
 
 <p><br>
-<h4 class="title is-4">B. Create a Single Topology in Mininet</h4></p>
+-c means client mode.</p>
 
-<pre><code>sudo mn --controller=remote,ip=127.0.0.1 --mac -i 10.1.1.0/24 --switch=ovsk,protocols=OpenFlow13 --topo=single,4
-</code></pre>
+<p>-i means reporting interval</p>
 
-<figure>
-    <img src="/mininet/ipv6_mininet1.jpg"/> 
-</figure>
+<p>-t means test duration in seconds</p>
 
+<p>-b means bandwidth 10m means 10Mbps</p>
 
-<p><br>
-<h4 class="title is-4">C. Verify the Host IPv6 addresses</h4></p>
+<p>-P means parallel connections
+<br><br></p>
 
-<p>In the mininet terminal, issue the below command,</p>
-
-<pre><code>    h1 ifconfig h1-eth0 
-    h2 ifconfig h2-eth0 
-    h3 ifconfig h3-eth0 
-    h4 ifconfig h4-eth0
-</code></pre>
-
-<figure>
-    <img src="/mininet/ipv6_address.jpg"/> 
-</figure>
-
+<h4 class="title is-4">2. UDP Traffic Tests</h4>
 
 <p><br>
-<h4 class="title is-4">D. Ping Test between Host1 to Host2</h4></p>
+<h5 class="title is-5">A. Run the IPERF UDP Server</h5></p>
 
-<p>ping6 utility is used for IPv6 Ping</p>
+<pre><code>iperf -u -s 
 
-<p>Syntax :</p>
-
-<pre><code>ping6 -I [Link local address | Unicast address]
 </code></pre>
 
-<p>Example:</p>
-
-<pre><code>h1 ping6 -I h1-eth0 fe80::200:ff:fe00:2
-</code></pre>
-
-<p><figure>
-    <img src="/mininet/ipv6_ping_output.jpg"/> 
-</figure>
-
+<p>-u means udp
 <br>
-<h4 class="title is-4">E. IPERF TCP Test (Host1 to Host2)</h4></p>
+<h5 class="title is-5">B. RUN IPERF UDP Client</h5></p>
 
-<p>In IPERF &ldquo;-V&rdquo; option is used for enabling IPv6.</p>
+<pre><code>iperf -u -c 10.1.1.4 -b 10m -i 10 -t 30
+iperf -u -c 10.1.1.4 -b 10m -i 10 -P 10 -t 30
 
-<p><strong>To run the TCP server:</strong></p>
-
-<p>Run this IPerf Server in Host2(h2)</p>
-
-<p>Note: open xterm for hosts, to run the iperf tests.</p>
-
-<pre><code>iperf -V -s
 </code></pre>
 
-<p>To run the TCP Client:</p>
+<p>-b means bandwidth 10m means 10Mbps
+<br><br></p>
 
-<p>Global Unicast Address</p>
-
-<pre><code>iperf -c -V
-</code></pre>
-
-<p>Example:</p>
-
-<pre><code>iperf -c 2001:2 -V
-</code></pre>
-
-<p>LinkLocal Address</p>
-
-<pre><code>iperf -c &lt;link local address%interface name&gt; -V Example: iperf -c fe80::200:ff:fe00:2%h1-eth0 -V
-</code></pre>
-
-<p>In our case, we are using the Link Local address, hence we using this below command,</p>
-
-<p>Run this IPerf Client in Host1(h1), connecting to h2.</p>
-
-<pre><code>iperf -c fe80::200:ff:fe00:2%h1-eth0 -V
-</code></pre>
-
-<p>Note: we need to specify IPv6 link local address in this &ldquo;IPv6-address%interface&rdquo; format.</p>
-
-<figure>
-    <img src="/mininet/ipv6_iperf_test.jpg"/> 
-</figure>
-
-
-<p>UDP Test is similar to above.</p>
+<h4 class="title is-4">3. HTTP Tests</h4>
 
 <p><br>
-<h4 class="title is-4">F. Testing in IPv6 Unicast address</h4></p>
+Run Python Simple Web Server in h4
+<br></p>
 
-<p>Assign the IPv6 global unicast address to hosts</p>
+<pre><code>python -m SimpleHTTPServer 80
 
-<pre><code>h1 ifconfig h1-eth0 inet6 add 2001::1/64
-h2 ifconfig h2-eth0 inet6 add 2001::2/64
-</code></pre>
-
-<p>Ping Test</p>
-
-<pre><code>h1 ping6 -I h1-eth0 2001::2
-
-h2 ping6 -I h2-eth0 2001::1
-</code></pre>
-
-<p>TCP Test</p>
-
-<p>Start the Tcp Server in h2</p>
-
-<pre><code>iperf -V -s
-</code></pre>
-
-<p>Start the Tcp Client in h1</p>
-
-<pre><code>iperf -c 2001::2 -V
-</code></pre>
-
-<p>To check the IPv6 routes</p>
-
-<pre><code>ip -6 route
 </code></pre>
 
 <p><br>
+From H1, Access the Web server</p>
+
+<pre><code>curl http://10.1.1.4/
+
+</code></pre>
+
+<p><br>
+curl utility used as web client to access the web server.</p>
+
+<p>If we want to simulate the 1000s users accessing the web server on the same time (load), we can use ab(apache bench) tool
+<br></p>
+
+<pre><code>ab -n 500 -c 50 http://10.1.1.4/
+</code></pre>
+
+<p>-c  50  means parallel request per second (50 Requests per second)</p>
+
+<p>-n 500  means total request for this test (500 requests)</p>
+
+<p>Apache bench tool have lot more options , More details can be found from the below link</p>
+
+<p><a href="https://httpd.apache.org/docs/2.4/programs/ab.html">https://httpd.apache.org/docs/2.4/programs/ab.html</a>
 <br>
-<h5 class="title is-5">Continue with next part</h5></p>
+<br></p>
 
-<p><a href="/sdn-tutorials/mininet-cluster">Part5 - Mininet Cluster</a></p>
+<h5 class="title is-5">Continue with next part</h5>
+
+<p><a href="/sdn-tutorials/mininet-custom-topology">Part3 - Writing Custom Topology</a>
+<br></p>
 
   </div>
 </section>

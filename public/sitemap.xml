@@ -7,11 +7,11 @@
   </url>
   
   <url>
-    <loc>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</loc>
+    <loc>http://knetsolutions.in/sdn-tutorials/mininet-cluster/</loc>
   </url>
   
   <url>
-    <loc>http://knetsolutions.in/sdn-tutorials/mininet-cluster/</loc>
+    <loc>http://knetsolutions.in/sdn-tutorials/mininet-tutorial/</loc>
   </url>
   
   <url>
@@ -20,6 +20,22 @@
   
   <url>
     <loc>http://knetsolutions.in/services/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/mininet-introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/mininet-traffic-tests/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/mininet-custom-topology/</loc>
+  </url>
+  
+  <url>
+    <loc>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</loc>
   </url>
   
   <url>
@@ -45,10 +61,6 @@
   
   <url>
     <loc>http://knetsolutions.in/sdn-project-ideas/</loc>
-  </url>
-  
-  <url>
-    <loc>http://knetsolutions.in/sdn-tutorials/testing-ipv6-in-mininet/</loc>
   </url>
   
   <url>
